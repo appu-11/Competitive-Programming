@@ -1,6 +1,5 @@
 <snippet>
 	<content><![CDATA[
-// Code by Apurva Patil(rustee_95)
 #include<bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define ll long long int
@@ -8,63 +7,55 @@
 #define all(x) (x).begin(), (x).end()
 #define pb push_back
 #define vll vector<ll>
-#define vi vector<ll>
+#define vi vector<int>
+#define scan(vvv,nnn) for(ll i=0; i<nnn; i++) cin>>vvv[i];
+#define print(vvv,nnn) for(ll i=0; i<nnn; i++) cout<<vvv[i]<<" ";
+#define scout(vvv) cout<<vvv<<endl
 #define ff first
 #define ss second
+#define iendl "\n", cout<<flush
 using namespace std;
-//--------------------------------------------------------------------------------------------------------------------------------------------
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #ifndef ONLINE_JUDGE
-#define dbg(x) cerr<<#x<<" ";_print_(x);cerr<<endl;
+#include "db.cpp"
 #else
 #define dbg(x)
 #endif
 
-//--------------------------------------------------------------------------------------------------------------------------------------------
-void _print_(ll t) { cerr << t; }
-void _print_(int t) { cerr << t; }
-void _print_(string t) { cerr << t; }
-void _print_(char t) { cerr << t; }
-void _print_(long double t) { cerr << t; }
-void _print_(double t) { cerr << t; }
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//--------------------------------------------------------------------------------------------------------------------------------------------
-template <class T, class V> void _print_(pair <T, V> p);
-template <class T, class V> void _print_(pair <T, V> p) { cerr << "{"; _print_(p.first); cerr << ","; _print_(p.second); cerr << "}"; }
-template <class T> void _print_(set <T> v);
-template <class T> void _print_(set <T> v) { cerr << "[ "; for (T i : v) { _print_(i); cerr << " "; } cerr << "]"; }
-template <class T, class V> void _print_(map <T, V> v);
-template <class T, class V> void _print_(map <T, V> v) { cerr << "[ "; for (auto i : v) { _print_(i); cerr << " "; } cerr << "]"; }
-template <class T> void _print_(multiset <T> v);
-template <class T> void _print_(multiset <T> v) { cerr << "[ "; for (T i : v) { _print_(i); cerr << " "; } cerr << "]"; }
-template <class T> void _print_(vector <T> v);
-template <class T> void _print_(vector <T> v) { cerr << "[ "; for (T i : v) { _print_(i); cerr << " "; } cerr << "]"; }
+vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i = 2; i <= n; i++)if (arr[i] == 0) {vect.push_back(i); for (int j = 2 * i; j <= n; j += i)arr[j] = 1;} return vect;}
+ll gcd(ll a, ll b) {if (b > a) {return gcd(b, a);} if (b == 0) {return a;} return gcd(b, a % b);}
 
-//--------------------------------------------------------------------------------------------------------------------------------------------
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+const ll INF = 1e18;
 const ll mod = 1000000007;
+const int N = 200005;
+// const int N = 100005;
 
 void solve() {
-    $0
+	$0
 }
 /*
 
 */
 int main() {
-    fast;
+	fast;
 #ifndef ONLINE_JUDGE
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-    freopen("err.txt", "w", stderr);
+	freopen("err.txt", "w", stderr);
 #endif
-    ll tttt = 1;
-    cin >> tttt;
-    ll testcases = 1;
-    while (testcases <= tttt){
-        cout << "Case #" << testcases << ": ";
-        solve();
-        testcases++;
-    }
-    return 0;
+	ll tttt = 1;
+	cin >> tttt;
+	ll testcases = 1;
+	while (testcases <= tttt) {
+		cout << "Case #" << testcases << ": ";
+		solve();
+		testcases++;
+	}
+	return 0;
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
