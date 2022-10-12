@@ -1,5 +1,6 @@
 <snippet>
 	<content><![CDATA[
+//***** vll g[n+1] ******//
 vll parent(n + 1);
 vll deg(n + 1);
 auto makeset = [&](ll n) {
