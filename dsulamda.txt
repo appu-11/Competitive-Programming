@@ -1,21 +1,21 @@
 <snippet>
 	<content><![CDATA[
-vi parent(n + 1);
-vi deg(n + 1);
-auto makeset = [&](int n) {
-	for (int i = 1; i < n + 1; i++) {
+vll parent(n + 1);
+vll deg(n + 1);
+auto makeset = [&](ll n) {
+	for (ll i = 1; i < n + 1; i++) {
 		parent[i] = i;
 		deg[i] = 0;
 	}
 };
 makeset(n);
-function<int(int)> findpar = [&](int node) {
+function<ll(ll)> findpar = [&](ll node) {
 	if (parent[node] == node) {
 		return node;
 	}
 	return parent[node] = findpar(parent[node]);
 };
-auto uni = [&](int u, int v) {
+auto uni = [&](ll u, ll v) {
 	u = findpar(u);
 	v = findpar(v);
 	if (deg[u] < deg[v]) {
