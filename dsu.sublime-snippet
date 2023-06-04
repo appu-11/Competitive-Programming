@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+vll e(N, -1);
+
+ll find(ll x) { return e[x] < 0ll ? x : e[x] = find(e[x]); }
+bool sameSet(ll a, ll b) { return find(a) == find(b); }
+ll size(ll x) { return -e[find(x)]; }
+bool join(ll a, ll b) {
+	a = find(a), b = find(b);
+	if (a == b) return false;
+	if (e[a] > e[b]) swap(a, b);
+	e[a] += e[b]; e[b] = a;
+	return true;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dsu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
